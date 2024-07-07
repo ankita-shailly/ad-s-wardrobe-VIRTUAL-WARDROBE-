@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD's Wardrobe</title>
+    <link rel="icon" href="WARDRODE.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="style.css">  -->
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <style>
+        
+        #logo{
+    height: 188%;
+    width: 482px;
+    font-size: 60px;
+}
+ul{
+    display: flex; /* bring the li in the straight line */
+    gap: 1rem; /* add gap between the li */
+    list-style: none; /*remove the markers of the li*/
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px 20px; /* Button padding */
+}
+.link{
+    text-decoration: none;/*remove the underline for the link*/
+    color: #000000;
+    font-size: 20px;
+    padding: 10px ; /*inc space b/w li*/
+    position: relative;
+}
+
+#login{
+    height: 40px;
+    width: 120px;
+    border-radius: 150px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(84, 6, 181);  
+position: absolute; /* Absolute positioning */
+top: 10px;          /* Distance from the top */
+right: 10px;        /* Distance from the right */
+padding: 10px 20px; /* Button padding */
+color: white;       /* Text color */
+cursor: pointer;    /* Pointer cursor on hover */
+font-size: large;
+font-family: 'Times New Roman', Times, serif;
+}
+.search {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    position: absolute;  /* Absolute positioning */
+    top: 120px;           /* Distance from the top */
+    right: 10px;         /* Distance from the right */
+    width: auto;         /* Auto width based on content */
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #eef0ef;
+    color: #555;
+    padding: 10px 25px;
+    height: 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-right: 16px; /* Space between input and button */
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #eef0ef;
+    color: #555;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.search button img {
+    width: 18px;
+}
+
+.header{
+    background-color: #e2e2e2;
+    padding: 60px;
+}
+#logoimg{
+    border-radius: 50%;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    position: absolute;  /* Absolute positioning */
+    top: 250px;           /* Distance from the top */
+    right: 10px;         /* Distance from the right */
+    width: auto;
+}
+.header h1{
+    font-size: 100px;
+    margin-left: 40px;
+    line-height: 0.9; /* Adjust this value to decrease line spacing */
+}
+.virtually{
+    color: rgb(244, 36, 168);
+    font-size: 100px;
+    margin-left: 40px;
+}
+.header2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 700px; /* Fixed height */
+    text-align: center; /* Center the heading text */
+}
+.header2 img {
+    max-width: 900px; /* Adjust this value as needed */
+    height: 400px;
+}
+#about{
+    padding: 50px;
+    background-color: #d8d7d8;
+}
+.aboutus{
+    background-color: #ffffff;
+    width: 400px;
+}
+.aboutus h1{
+    padding: 30px;
+    font-size: 80px;
+    color: rgb(244, 36, 168);
+     margin: 0; /* Remove default margins */
+     line-height: 0.7; /* Adjust the line height if necessary */
+}
+#about {
+    display: flex; /* Enable flexbox on the container */
+    align-items: flex-start; /* Align items at the top */
+}
+.aboutus {
+    margin-right: 200px; /* Optional: add some space between the divs */
+}
+.aboutus h1 {
+    margin: 0; /* Remove default margins */
+    line-height: 1; /* Adjust line height if necessary */
+}
+.aboutext{
+    font-size: 25px;
+}
+#contact{
+    height: 600px;
+    background-color: rgb(135, 2, 75);
+    padding: 5px;
+}
+
+
+
+    </style>
+</head>
+<body>
+        <h1 id="logo">AD's wardrobe</h1>
+        <a href="3login.html"><button id="login"> LOG IN</button></a>
+    <nav>
+        <ul>
+            <li ><a href="#" class="link">HOME</a></li>
+            <li><a href="4trends.html" class="link">TRENDS</a></li>
+            <li><a href="#about" class="link">ABOUT US</a></li>
+            <li><a href="#contact" class="link">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="text" placeholder="Search...."
+        spellcheck="false">
+        <button><img src="search.png" ></button>
+    </div><br><br>
+    <div class="header">
+        <h1 style="font-size: 80px;" >New <span style="color: rgb(244, 36, 168); font-size: 100px;">Style & Trends</span></h1>
+        <h1>Fashion Unleasdhed</h1>
+        <h1 class="virtually">Virtually</h1>
+        <img id="logoimg" src="wardrobe.png">
+    </div>
+    <div class="header2">
+        <h1 style="font-size: 85px; margin-top: 10px;"> Your very <samp style="color: rgb(244, 36, 168);">OWN</samp> wardrobe</h1>
+        <div class="image">
+            <img id="boyhome" src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/jRIDyfqAr-HARRA-Hemp-Shirt.png" alt="boy image">
+            <img id="girlhome" src="https://www.gluestore.com.au/cdn/shop/products/20220811-LAURA_ECOMM_11.08-886_800x.jpg?v=1662678655" alt="girl image">
+            <img src="https://www.andamen.com/cdn/shop/products/01_42_60_540x.jpg?v=1642543224" alt="">
+            <img src="https://i.ebayimg.com/images/g/w-QAAOSwa85ihVh6/s-l1600.webp" alt="">
+            <img src="https://brora.sirv.com/media/catalog/product/m/s/ms2207_km2480_2.jpg?scale.option=fill&scale.width=490&scale.height=622" alt="">
+        </div>
+    </div>
+    <div id="about">
+        <div class="aboutus">
+            <H1>A</H1>
+            <H1>B</H1>
+            <H1>O</H1>
+            <H1>T</H1>
+            <H1>US</H1>
+        </div>
+        <div class="aboutext">
+            <p>Welcome to AD's Wardrobe, where fashion meets technology! Founded by Ankita and Diksha, two passionate BCA students from Graphic Era Deemed to be University, our platform brings together the latest trends in clothing with cutting-edge digital innovation. 
+            <br> <br><span style="color: rgb(244, 36, 168);">Meet Ankita and Diksha : </span><br><br>
+            Ankita and Diksha are dynamic individuals with a shared vision to revolutionize the way people shop for clothes online. As students of graphic design and coding, they possess a unique blend of creativity and technical expertise, which they leverage to craft immersive and user-friendly experiences on our platform.
+            <br><br>Our journey began with a simple idea – to create a seamless bridge between fashion and technology. Inspired by the growing influence of e-commerce and the desire to empower users to make informed fashion choices. <br><br>
+            At AD's Wardrobe, we envision a future where fashion is accessible, inclusive, and sustainable. Through our innovative technology and dedication to customer satisfaction, we aim to redefine the online shopping experience and empower users to express themselves confidently through their clothing choices. <br><br>
+            <span style="color:rgb(244, 36, 168) ;">AD's Wardrobe welcomes you with open arms. Get ready to discover, experiment, and elevate your fashion game like never before!</span>
+        </p>
+        </div>
+    </div>
+    <div id="contact">
+        <h1 style="color: white; margin-left: 40px; margin-top: 20px;font-size: 100px;"> CONTACT US</h1>
+        <div id="info_contact" style="color: white; margin-left: 60px;">
+            <h1 >You can contact us by clicking on the link below :</h1><br>
+            <h3 style="margin-left: 42px;">Gmail : adswardrobe@gmail.com</h3>
+            <h3 style="margin-left: 42px;">Instagram : adswardrobeofficial</h3>
+            <h3 style="margin-left: 42px;">linkedin : https:/www.linkedin.com/in/ads-wardrobe-17477a2b4/</h3>
+
+            <a href="https://github.com/Dikshabisht5/Ad-s-Wardrobe"><h3 style="color: white; margin-left: 40px;">Github : ad's wardrobe</h3></a>
+            <h3 style="margin-left: 42px;">linkedin :</h3>
+            <a href="https://www.linkedin.com/in/ankita-shailly-17477a2b4/"><h3 style="color: white; margin-left: 85px;">https://www.linkedin.com/in/ankita-shailly-17477a2b4/</h3></a>
+            <a href="https://www.linkedin.com/in/diksha-bisht-a58801272/"><h3 style="color: white; margin-left: 85px;">https://www.linkedin.com/in/diksha-bisht-a58801272/ </h3></a>
+        </div>
+        <img src="wardrobe.png" style="display: flex;align-items: center; position: absolute;right: 60px; top: 2400px;">
+    </div>
+</body>
+</html>

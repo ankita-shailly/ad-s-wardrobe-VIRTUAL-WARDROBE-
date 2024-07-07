@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe</title>
+    <link rel="icon" href="WARDRODE.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .item {
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+        
+        }
+        .item img {
+            width: 272px;
+            height: 341px;
+            margin-right: 200px; /* Space between image and buttons */
+        }
+        .try-button, .remove-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 100px; /* Space between buttons */
+            border-radius: 50px;
+            border: none;
+            background-color: rgb(181, 9, 104);
+            color: aliceblue;
+            width: 100px;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="logo">AD's wardrobe</h1>
+    <nav>
+        <ul>
+            <li><a href="2home.html" class="link">HOME</a></li>
+            <li><a href="4trends.html" class="link">TRENDS</a></li>
+            <li><a href="#" class="link">ORDERS</a></li>
+            <li><a href="#" class="link">ACCOUNT</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h2>Clothes</h2>
+        <div id="itemContainer">
+            <!-- JavaScript will populate this div with images and buttons -->
+        </div>
+    </div>
+
+    <script>
+        var imageUrls = JSON.parse(localStorage.getItem("imageUrls")) || [];
+        if (imageUrls.length > 0) {
+            imageUrls.forEach((url, index) => {
+                var itemDiv = document.createElement("div");
+                itemDiv.classList.add("item");
+
+                var img = document.createElement("img");
+                img.src = url;
+                itemDiv.appendChild(img);
+
+                var tryButton = document.createElement("button");
+                tryButton.textContent = "Try";
+                tryButton.classList.add("try-button");
+                tryButton.addEventListener("click", function() {
+                    tryOn(); // Call the tryOn() function when clicked
+                });
+                itemDiv.appendChild(tryButton);
+
+                var removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.classList.add("remove-button");
+                removeButton.addEventListener("click", function() {
+                    removeItem(index);
+                });
+                itemDiv.appendChild(removeButton);
+
+                document.getElementById("itemContainer").appendChild(itemDiv);
+            });
+        }
+
+        function removeItem(index) {
+            imageUrls.splice(index, 1);
+            localStorage.setItem("imageUrls", JSON.stringify(imageUrls));
+            location.reload(); // Reload the page to reflect changes
+        }
+
+        function tryOn() {
+            // Create a WebSocket connection
+            const socket = new WebSocket('ws://localhost:8765');
+
+            // Connection opened
+            socket.addEventListener('open', function (event) {
+                // Send a message to the server
+                socket.send('try_on');
+            });
+
+            // Listen for messages from the server
+            socket.addEventListener('message', function (event) {
+                console.log('Message from server ', event.data);
+            });
+
+            // Connection closed
+            socket.addEventListener('close', function (event) {
+                console.log('WebSocket connection closed');
+            });
+        }
+    </script>
+</body>
+</html>
+
+

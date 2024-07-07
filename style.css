@@ -1,0 +1,21 @@
+#logo{
+    height: 188%;
+    width: 482px;
+    font-size: 60px;
+}
+ul{
+    display: flex; /* bring the li in the straight line */
+    gap: 1rem; /* add gap between the li */
+    list-style: none; /*remove the markers of the li*/
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px 20px; /* Button padding */
+}
+.link{
+    text-decoration: none;/*remove the underline for the link*/
+    color: #000000;
+    font-size: 20px;
+    padding: 10px ; /*inc space b/w li*/
+    position: relative;
+}
